@@ -64,3 +64,60 @@ pip freeze > requirements.txt
 
 
 Goodle Drive link to the project : https://drive.google.com/drive/folders/1TipN06_9-l3ppV64pVarUOoMNtfkmaUq
+
+
+
+
+
+
+
+# Natural Language Processing – Vehicle Complaints Classification
+
+## What is NER?
+Named Entity Recognition (NER) is an NLP technique used to automatically identify and categorize important pieces of information—such as names, locations, dates, or domain‑specific entities—from unstructured text. NER converts raw sentences into structured elements enabling better information extraction and downstream analysis.
+
+## Project Overview
+In this project, raw vehicle complaint narratives are transformed from unstructured text into a structured and machine‑readable format. This includes text cleaning, tokenization, encoding, and assigning entity labels. Structuring the dataset enables deep learning models to learn complaint patterns, identify main issues, and classify vehicle defects effectively.
+
+### 📌 Dataset Screenshot Placeholder
+![Dataset Screenshot](path/to/dataset_image.png)
+
+## Models and Methods
+
+| Model    | File / Folder                                       | Notes |
+|---------|------------------------------------------------------|-------|
+| RNN     | `255_Project_RNN.ipynb`                              | Simple recurrent baseline for sequence modeling on complaint texts. |
+| LSTM    | `255_Project_LSTM_BiLSTM.ipynb`                      | Unidirectional LSTM on vehicle complaint texts. |
+| BiLSTM  | `255_Project_LSTM_BiLSTM.ipynb`, `BiLstm__Implementation_vehicle_dataset.ipynb` | Bidirectional LSTM to capture context from both directions. |
+| BERT    | `BERT_Implementation_vehicle_dataset.ipynb`          | Transformer‑based model fine‑tuned for text classification. |
+| RoBERTa | `Roberta code and model/`                            | Robustly optimized BERT variant fine‑tuned on the same dataset. |
+
+## Results
+![Results Screenshot](path/to/results_image.png)
+
+RoBERTa achieves the best performance with an F1‑score of **0.9566** and accuracy of **0.9813**, outperforming all other evaluated models due to its strong contextual encoding and ability to capture fine‑grained complaint patterns.
+
+## Token‑Level NER Output
+Each complaint sentence is broken into tokens, and the model predicts the correct entity label, converting text into structured data.
+
+### 📎 Token Output Screenshot Placeholder
+![Token Tagging Example](path/to/token_output.png)
+
+### Example:
+```
+Sentence: "The engine makes a loud rattling noise when accelerating."
+
+Token        Predicted TAG
+--------------------------------
+The          O
+engine       PART
+makes        O
+a            O
+loud         ATTRIBUTE
+rattling     ISSUE
+noise        ISSUE
+when         O
+accelerating ACTION
+.            O
+```
+
