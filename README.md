@@ -1,4 +1,4 @@
-# Natural Language Processing – Vehicle Complaints Classification
+# Natural Language Processing – Named Entity Recognition for Vehicle Attribute Extraction
 
 ## What is NER?
 Named Entity Recognition (NER) is an NLP technique used to automatically identify and categorize important pieces of information—such as names, locations, dates, or domain‑specific entities—from unstructured text. NER converts raw sentences into structured elements enabling better information extraction and downstream analysis.
@@ -8,7 +8,7 @@ In this project, raw vehicle complaint narratives are transformed from unstructu
 
 ### Dataset 
 <img width="804" height="414" alt="image" src="https://github.com/user-attachments/assets/9e4d2a80-d66a-4806-8370-de791e797337" />
-
+Reference - https://arxiv.org/abs/2304.10893 
 
 ## Repository Structure
 
@@ -30,20 +30,10 @@ In this project, raw vehicle complaint narratives are transformed from unstructu
   - `transformers` (for BERT/RoBERTa).
   - `tqdm` and `datasets` (optional, depending on notebook).
 
-## Models and Methods
 
-| Model    | File / Folder                                       | Notes |
-|---------|------------------------------------------------------|-------|
-| RNN     | `255_Project_RNN.ipynb`                              | Simple recurrent baseline for sequence modeling on complaint texts. |
-| LSTM    | `255_Project_LSTM_BiLSTM.ipynb`                      | Unidirectional LSTM on vehicle complaint texts. |
-| BiLSTM  | `255_Project_LSTM_BiLSTM.ipynb`, `BiLstm__Implementation_vehicle_dataset.ipynb` | Bidirectional LSTM to capture context from both directions. |
-| BERT    | `BERT_Implementation_vehicle_dataset.ipynb`          | Transformer‑based model fine‑tuned for text classification. |
-| RoBERTa | `Roberta code and model/`                            | Robustly optimized BERT variant fine‑tuned on the same dataset. |
-
-##  Results
 ## Results
 
-| Model                  | Precision        | Recall           | F1 Score         | Accuracy         |
+| Model                  | Precision         | Recall            | F1 Score          | Accuracy          |
 |------------------------|-------------------|-------------------|-------------------|-------------------|
 | RNN                    | 0.4356 ± 0.01     | 0.6438 ± 0.01     | 0.5196 ± 0.01     | 0.6438 ± 0.01     |
 | RNN (main entities)    | 0.6957            | 0.8696            | 0.7594            | 0.8228            |
@@ -77,4 +67,18 @@ when         O
 accelerating ACTION
 .            O
 ```
+
+
+## Overall Project Structure
+<img width="904" height="479" alt="image" src="https://github.com/user-attachments/assets/15ac910a-fa7f-4dd9-8520-c44c17240496" />
+
+
+## Future Work
+
+- Expand the dataset to improve model generalization across more vehicle types and complaint categories.  
+- Perform systematic hyperparameter tuning for all deep learning models, especially Transformer-based architectures.  
+- Incorporate model interpretability techniques (e.g., SHAP, LIME) to better understand entity predictions and failure cases.  
+- Explore domain-specific pretraining or adaptation to further boost RoBERTa performance on automotive text.  
+- Deploy the best-performing model as an API or lightweight web application for real-time complaint analysis.  
+- Introduce multi-label or hierarchical classification to capture multiple issues within a single complaint narrative.
 
