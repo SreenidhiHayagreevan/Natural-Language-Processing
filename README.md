@@ -50,7 +50,7 @@ Each complaint sentence is broken into tokens, and the model predicts the correc
 <img width="1020" height="64" alt="image" src="https://github.com/user-attachments/assets/0fee34bc-b2d0-4c70-ab46-88663b8b6072" />
 
 
-### Example:
+### Another Example:
 ```
 Sentence: "The engine makes a loud rattling noise when accelerating."
 
