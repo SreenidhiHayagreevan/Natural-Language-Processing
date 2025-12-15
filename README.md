@@ -18,7 +18,7 @@ In this project, raw vehicle complaint narratives are transformed from unstructu
 - `255_Project_RNN.ipynb` – Recurrent Neural Network baseline implementation on the vehicle dataset.
 - `255_Project_LSTM_BiLSTM.ipynb` – LSTM and BiLSTM implementations and experiments.
 - `BiLstm__Implementation_vehicle_dataset.ipynb` – Additional BiLSTM experiments on the vehicle dataset. 
-- `BERT_Implementation_vehicle_dataset.ipynb` – BERT fine‑tuning on the vehicle complaints dataset.  
+- `BERT/` – BERT fine‑tuning on the vehicle complaints dataset.  
 
 ## Recommended environment:
 - Python 3.8+.
